@@ -16,10 +16,9 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 **Make sure to run the server on a different port (3001)
 
-## How to use
-
 ![Sensor Dashboard](./images/sensor-dashboard-mockup.png)
 
+## How to use
 - Press the `Start` button to start the stream
 - Press the `Stop` button to stop the stream
 - Press the `Reset` button to reset the stream
