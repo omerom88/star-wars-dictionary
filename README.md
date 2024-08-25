@@ -48,6 +48,7 @@ The graph is updated every 0.1 seconds with the new data points.
 - For the memory to not overflow, I limited the data points in the graph to MAX_DATA_POINTS=200. If we want to increase this number, we should consider storing the old data somewhere.
   I suggest storing the data in the server and pulling only the data we want to see in real-time.
 - This implementation can work for 20 sensors - if we want to extend it to more sensors, we should consider using a different approach to render the sensor list and the data points in the graph by looking at a subset of sensors at a time.
+- I currently use a single message queue to store messages from the server. This could create a bottleneck if we receive a large volume of messages. To address this, we should explore alternative methods for storing messages, such as implementing a circular buffer or utilizing a different data structure that can handle the messages more effectively. Alternatively, an even better solution could be to store the data on the server and retrieve only the data we need to view in real time.
 
 ## Improvements
 - The graph can be improved by adding more features like zoom in, zoom out, and more.
