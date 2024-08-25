@@ -7,14 +7,7 @@
     <list default="true" id="b50da2e5-e31e-4e34-8d21-c3e779fc776f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/sensor-control.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sensor-control.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/sensor-dashboard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sensor-dashboard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/sensor-graph.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sensor-graph.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/sensor-list.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sensor-list.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/sensor-stats.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sensor-stats.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/hooks/use-sensor-sotre.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/use-sensor-sotre.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/utils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/utils.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/lib/utils.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/lib/utils.test.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -150,7 +143,7 @@
       <option name="presentableId" value="Default" />
       <updated>1724320764919</updated>
       <workItem from="1724320765945" duration="138000" />
-      <workItem from="1724320921865" duration="64410000" />
+      <workItem from="1724320921865" duration="66461000" />
     </task>
     <servers />
   </component>

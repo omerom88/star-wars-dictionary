@@ -134,9 +134,11 @@ export function useSensorStore() {
                     set((state) => {
                         if (state.dataPoints.length > 0) {
                             const elapsedTime =
-                                Date.now() -
                                 getDateFromDataPoint(
-                                    state.dataPoints[0].time
+                                    state.dataPoints.at(-1).time
+                                ).getTime() -
+                                getDateFromDataPoint(
+                                    state.dataPoints.at(0).time
                                 ).getTime();
                             const rate =
                                 (state.dataPoints.length / elapsedTime) * 1000;
