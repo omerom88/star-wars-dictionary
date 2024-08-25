@@ -4,11 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b50da2e5-e31e-4e34-8d21-c3e779fc776f" name="Changes" comment="" />
+    <list default="true" id="b50da2e5-e31e-4e34-8d21-c3e779fc776f" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/sensor-control.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sensor-control.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/sensor-dashboard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sensor-dashboard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/sensor-graph.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sensor-graph.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/sensor-list.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sensor-list.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/sensor-stats.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sensor-stats.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/use-sensor-sotre.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/use-sensor-sotre.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/utils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/utils.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tests/lib/utils.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/lib/utils.test.ts" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -32,6 +46,7 @@
     "Jest.utils.test.ts.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
     "last_opened_file_path": "/Users/omerrom/dev/sensor-dashboard/src/data",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.standard": "true",
@@ -61,7 +76,7 @@
       <recent name="$PROJECT_DIR$/src/types/sensor.ts" />
     </key>
   </component>
-  <component name="RunManager" selected="Jest.cincurrent-message-queue.test.ts">
+  <component name="RunManager" selected="Jest.utils.test.ts">
     <configuration name="ConcurrentMessageQueue" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <jest-package value="$PROJECT_DIR$/node_modules/jest" />
@@ -118,8 +133,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Jest.cincurrent-message-queue.test.ts" />
         <item itemvalue="Jest.utils.test.ts" />
+        <item itemvalue="Jest.cincurrent-message-queue.test.ts" />
         <item itemvalue="Jest.toTwoFloatingPoints" />
         <item itemvalue="Jest.getDateFromDataPoint" />
         <item itemvalue="Jest.ConcurrentMessageQueue" />
@@ -135,7 +150,7 @@
       <option name="presentableId" value="Default" />
       <updated>1724320764919</updated>
       <workItem from="1724320765945" duration="138000" />
-      <workItem from="1724320921865" duration="60434000" />
+      <workItem from="1724320921865" duration="64410000" />
     </task>
     <servers />
   </component>

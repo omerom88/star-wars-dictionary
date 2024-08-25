@@ -10,8 +10,8 @@ export function toTwoFloatingPoints(value: number) {
     return Math.round(value * 100) / 100;
 }
 
-export function getDateFromDataPoint(dataPoint: ClientDataPoint) {
-    const [time, period] = dataPoint.time.split(' ');
+export function getDateFromDataPoint(timeString: string) {
+    const [time, period] = timeString.split(' ');
     const [hourString, minuteString, secondString] = time.split(':');
     let hours = parseInt(hourString);
     const minutes = parseInt(minuteString);

@@ -25,7 +25,7 @@ describe('getDateFromDataPoint', () => {
             ] as ClientDataPoint['values'],
         };
 
-        const result = getDateFromDataPoint(dataPoint as ClientDataPoint);
+        const result = getDateFromDataPoint(dataPoint.time);
 
         expect(result.getHours()).toBe(9);
         expect(result.getMinutes()).toBe(30);
@@ -42,7 +42,7 @@ describe('getDateFromDataPoint', () => {
             ] as ClientDataPoint['values'],
         };
 
-        const result = getDateFromDataPoint(dataPoint);
+        const result = getDateFromDataPoint(dataPoint.time);
 
         expect(result.getHours()).toBe(14);
         expect(result.getMinutes()).toBe(45);
@@ -59,7 +59,7 @@ describe('getDateFromDataPoint', () => {
             ] as ClientDataPoint['values'],
         };
 
-        const result = getDateFromDataPoint(dataPoint);
+        const result = getDateFromDataPoint(dataPoint.time);
 
         expect(result.getHours()).toBe(0);
     });
@@ -73,7 +73,7 @@ describe('getDateFromDataPoint', () => {
                 { 3: 30 },
             ] as ClientDataPoint['values'],
         };
-        const result = getDateFromDataPoint(dataPoint);
+        const result = getDateFromDataPoint(dataPoint.time);
         expect(result.getHours()).toBe(12);
     });
 });

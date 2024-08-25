@@ -9,7 +9,7 @@ type SensorsListProps = {
     setAllSensorClick: (selected: boolean) => void;
 };
 
-export const SensorsList = ({
+export const SensorList = ({
     sensors,
     onSensorClick,
     setAllSensorClick,

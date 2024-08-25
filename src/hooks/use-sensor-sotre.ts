@@ -5,7 +5,7 @@ import {
     Sensor,
     ServerDataPoint,
 } from '@/types/sensor';
-import { toTwoFloatingPoints } from '@/lib/utils';
+import { getDateFromDataPoint, toTwoFloatingPoints } from '@/lib/utils';
 
 const MAX_DATA_POINTS = 200;
 const LINE_COLORS = [
@@ -31,11 +31,12 @@ const LINE_COLORS = [
     '#D2691E',
 ];
 
-type SensorsState = {
+type SensorState = {
     sensors: Sensor[];
     dataPoints: ClientDataPoint[];
     maxMeasurement: Measurement;
     averageMeasurement: Measurement;
+    actualRate: number;
     minMeasurement: Measurement;
     actions: {
         setSensorsData(data: ServerDataPoint): void;
@@ -44,7 +45,7 @@ type SensorsState = {
     };
 };
 
-const defaultStoreValues: Pick<SensorsState, ['actions']> = {
+const defaultStoreValues: Pick<SensorState, ['actions']> = {
     sensors: Array.from({ length: 20 }, (_, i) => ({
         id: i,
         selected: false,
@@ -71,10 +72,11 @@ const defaultStoreValues: Pick<SensorsState, ['actions']> = {
         time: Date.now(),
         sensorId: -1,
     },
+    actualRate: 0,
 };
 
 export function useSensorStore() {
-    return createStore<SensorsState>()((set) => ({
+    return createStore<SensorState>()((set) => ({
         ...defaultStoreValues,
         actions: {
             setSensorsData: (data: ServerDataPoint) => {
@@ -128,7 +130,24 @@ export function useSensorStore() {
                             : state.minMeasurement
                     );
 
-                    //set general stats
+                    //set actual rate
+                    set((state) => {
+                        if (state.dataPoints.length > 0) {
+                            const elapsedTime =
+                                Date.now() -
+                                getDateFromDataPoint(
+                                    state.dataPoints[0].time
+                                ).getTime();
+                            const rate =
+                                (state.dataPoints.length / elapsedTime) * 1000;
+                            return {
+                                actualRate: toTwoFloatingPoints(rate),
+                            };
+                        }
+                        return { actualRate: 0 };
+                    });
+
+                    //set sensors stats
                     set((state) => ({
                         sensors: state.sensors.map((sensor) => {
                             const average = toTwoFloatingPoints(

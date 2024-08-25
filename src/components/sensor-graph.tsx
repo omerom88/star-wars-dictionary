@@ -26,9 +26,9 @@ export const SensorsGraph = ({ sensors, dataPoints }: SensorsGraphProps) => {
         if (latestDataPoint) {
             const fromDate = setDateFromSeconds(
                 lookupPeriod,
-                getDateFromDataPoint(latestDataPoint)
+                getDateFromDataPoint(latestDataPoint.time)
             );
-            const dataPointDate = getDateFromDataPoint(dataPoint);
+            const dataPointDate = getDateFromDataPoint(dataPoint.time);
             return dataPointDate >= fromDate;
         }
         return true;

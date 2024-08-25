@@ -14,7 +14,7 @@ type SensorsControlProps = {
     setSensorsData: (data: ServerDataPoint) => void;
 };
 
-export const SensorsControl = ({ setSensorsData }: SensorsControlProps) => {
+export const SensorControl = ({ setSensorsData }: SensorsControlProps) => {
     const pullFromQueueAnsSetToStore = () => {
         emitInterval = setInterval(async () => {
             const message = await concurrentMessageQueue.dequeue();
