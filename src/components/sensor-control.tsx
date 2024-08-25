@@ -43,7 +43,7 @@ export const SensorControl = ({ setSensorsData }: SensorsControlProps) => {
     };
 
     return (
-        <div className="flex justify-evenly border-4 border-white br-4 p-4 rounded-2xl">
+        <div className="flex justify-evenly p-4">
             <Button onClick={onStart}>Start</Button>
             <Button onClick={onStop}>Stop</Button>
             <Button onClick={onReset}>Reset</Button>

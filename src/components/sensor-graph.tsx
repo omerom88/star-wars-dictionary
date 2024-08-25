@@ -42,7 +42,7 @@ export const SensorsGraph = ({ sensors, dataPoints }: SensorsGraphProps) => {
         }));
 
     return (
-        <div className="flex flex-col w-full border-4 border-white br-4 pr-8 pt-16 pb-8 gap-8 rounded-2xl min-h-96 min-w-96 ">
+        <div className="flex flex-col w-ful pr-8 pt-20 pb-16 gap-8 rounded-2xl min-h-96 min-w-96 ">
             <LiveChart lines={lines} data={data} />
             <div className="flex flex-row justify-evenly">
                 <div className="flex flex-row items-center w-full ml-4 gap-4">

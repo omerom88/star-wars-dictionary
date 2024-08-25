@@ -5,10 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b50da2e5-e31e-4e34-8d21-c3e779fc776f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/images/sensor-dashboard-mockup.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/actions/socket-actions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/actions/socket-actions.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/sensor-control.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sensor-control.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/sensor-dashboard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sensor-dashboard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/sensor-graph.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sensor-graph.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/sensor-stats.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sensor-total-stats.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +44,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/omerrom/dev/sensor-dashboard/src/data",
+    "last_opened_file_path": "/Users/omerrom/dev/sensor-dashboard/.images",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.standard": "true",
     "node.js.detected.package.tslint": "true",
@@ -57,6 +60,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/.images" />
       <recent name="$PROJECT_DIR$/src/data" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -144,7 +148,7 @@
       <option name="presentableId" value="Default" />
       <updated>1724320764919</updated>
       <workItem from="1724320765945" duration="138000" />
-      <workItem from="1724320921865" duration="67888000" />
+      <workItem from="1724320921865" duration="71944000" />
     </task>
     <servers />
   </component>

@@ -8,14 +8,14 @@ type SensorsStatsProps = {
     actualRate: number;
 };
 
-export const SensorsStats = ({
+export const SensorsTotalStats = ({
     maxMeasurement,
     minMeasurement,
     averageMeasurement,
     actualRate,
 }: SensorsStatsProps) => {
     return (
-        <div className="flex flex-col border-4 border-white br-4 p-4 rounded-2xl space-y-8">
+        <div className="flex flex-col p-4 space-y-8">
             <div className="text-center text-xl">Total</div>
             <div className="flex flex-row justify-evenly">
                 <StatsBox>

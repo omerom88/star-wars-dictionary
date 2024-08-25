@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { SensorList } from '@/components/sensor-list';
 import { SensorsGraph } from '@/components/sensor-graph';
-import { SensorsStats } from '@/components/sensor-stats';
+import { SensorsTotalStats } from '@/components/sensor-total-stats';
 import { SensorInfo } from '@/components/sensor-info';
 import { useStore } from 'zustand';
 import { useSensorStore } from '@/hooks/use-sensor-sotre';
@@ -53,7 +53,7 @@ export function SensorDashboard() {
             <div className="flex flex-grow flex-col gap-2 justify-between">
                 <SensorControl setSensorsData={setSensorsData} />
                 <SensorsGraph sensors={sensors} dataPoints={dataPoints} />
-                <SensorsStats
+                <SensorsTotalStats
                     maxMeasurement={maxMeasurement}
                     minMeasurement={minMeasurement}
                     averageMeasurement={averageMeasurement}
