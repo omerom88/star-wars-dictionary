@@ -6,7 +6,7 @@ import { SensorsGraph } from '@/components/sensor-graph';
 import { SensorsStats } from '@/components/sensor-stats';
 import { SensorInfo } from '@/components/sensor-info';
 import { useStore } from 'zustand';
-import { useSensorStore } from '../hooks/use-sensor-sotre';
+import { useSensorStore } from '@/hooks/use-sensor-sotre';
 import { concurrentMessageQueue } from '@/lib/concurrent-message-queue';
 import { useWebSocket } from '@/hooks/use-web-socket';
 import { SensorControl } from '@/components/sensor-control';
@@ -29,10 +29,8 @@ export function SensorDashboard() {
         dataPoints: state.dataPoints,
         actualRate: state.actualRate,
     }));
-    const { setSensorClick, setAllSensorClick, setSensorsData } = useStore(
-        sensorStore,
-        (selector) => selector.actions
-    );
+    const { setSensorClick, setAllSensorClick, setSensorsData, clearData } =
+        useStore(sensorStore, (selector) => selector.actions);
 
     const { error, isConnected } = useWebSocket(
         'http://localhost:3001',

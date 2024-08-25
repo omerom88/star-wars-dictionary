@@ -39,6 +39,7 @@ export const SensorControl = ({ setSensorsData }: SensorsControlProps) => {
 
     const onReset = async () => {
         await resetSocket();
+        window.location.reload();
     };
 
     return (
