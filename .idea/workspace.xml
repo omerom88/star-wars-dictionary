@@ -4,14 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b50da2e5-e31e-4e34-8d21-c3e779fc776f" name="Changes" comment="removing redundancies">
+    <list default="true" id="b50da2e5-e31e-4e34-8d21-c3e779fc776f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/sensor-dashboard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sensor-dashboard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/sensor-graph.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sensor-graph.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hooks/use-sensor-sotre.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/use-sensor-sotre.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hooks/use-web-socket.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/use-web-socket.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/utils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/utils.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/lib/utils.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/lib/utils.test.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -157,8 +152,17 @@
       <updated>1724320764919</updated>
       <workItem from="1724320765945" duration="138000" />
       <workItem from="1724320921865" duration="78228000" />
-      <workItem from="1724824260011" duration="9140000" />
+      <workItem from="1724824260011" duration="10301000" />
     </task>
+    <task id="LOCAL-00001" summary="removing redundancies">
+      <option name="closed" value="true" />
+      <created>1724855756541</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1724855756541</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

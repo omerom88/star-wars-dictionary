@@ -2,13 +2,24 @@
 
 A dashboard that shows the data in real time for a list of sensors.
 
-## Getting Started
+## Installation
 
-First, run the development server:
+1. Clone the repository:
+   ```
+   git clone https://github.com/omerom88/sensor-dashboard.git
+   cd sensor-service
+   ```
 
-```bash
-npm install
+2. Install dependencies:
+   ```
+   npm install
+   ```
 
+## Development
+
+Start the development server:
+
+```
 npm run dev
 ```
 
