@@ -12,10 +12,10 @@
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/sensor-control.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sensor-control.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/sensor-dashboard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sensor-dashboard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/sensor-graph.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sensor-graph.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/sensor-info.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sensor-info.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/sensor-list.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sensor-list.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/sensor-total-stats.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sensor-total-stats.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/live-chart.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/live-chart.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/hooks/use-sensor-sotre.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/use-sensor-sotre.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tailwind.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.ts" afterDir="false" />
     </list>
@@ -155,7 +155,7 @@
       <updated>1724320764919</updated>
       <workItem from="1724320765945" duration="138000" />
       <workItem from="1724320921865" duration="78228000" />
-      <workItem from="1724824260011" duration="7795000" />
+      <workItem from="1724824260011" duration="8142000" />
     </task>
     <servers />
   </component>
