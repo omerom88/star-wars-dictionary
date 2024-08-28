@@ -11,6 +11,8 @@ import { concurrentMessageQueue } from '@/lib/concurrent-message-queue';
 import { useWebSocket } from '@/hooks/use-web-socket';
 import { SensorControl } from '@/components/sensor-control';
 import { ServerDataPoint } from '@/types/sensor';
+import { FullScreenText } from '@/components/ui/full-screen-text';
+import { ErrorBoundary } from 'next/dist/client/components/error-boundary';
 
 export function SensorDashboard() {
     const [sensorStore] = useState(useSensorStore);
@@ -40,27 +42,40 @@ export function SensorDashboard() {
 
     if (error) {
         console.error(error);
-        return <div>Connection error</div>;
+        return (
+            <FullScreenText text="Connection Error! Please check the server." />
+        );
+    }
+    if (!isConnected) {
+        return <FullScreenText text="Connecting..." />;
     }
 
     return (
-        <div className="flex flex-row p-2 justify-between gap-2 max-h-screen">
-            <SensorList
-                sensors={sensors}
-                onSensorClick={setSensorClick}
-                setAllSensorClick={setAllSensorClick}
-            />
-            <div className="flex flex-grow flex-col gap-2 justify-between">
-                <SensorControl setSensorsData={setSensorsData} />
-                <SensorsGraph sensors={sensors} dataPoints={dataPoints} />
-                <SensorsTotalStats
-                    maxMeasurement={maxMeasurement}
-                    minMeasurement={minMeasurement}
-                    averageMeasurement={averageMeasurement}
-                    actualRate={actualRate}
+        <ErrorBoundary
+            errorComponent={({ error }) => (
+                <FullScreenText
+                    text={`React encountered an error: ${error.message}. Please reload.`}
                 />
+            )}
+        >
+            <div className="flex flex-row p-2 justify-between gap-2 max-h-screen">
+                <SensorList
+                    sensors={sensors}
+                    onSensorClick={setSensorClick}
+                    setAllSensorClick={setAllSensorClick}
+                />
+                <div className="flex flex-grow flex-col gap-2 justify-between">
+                    <SensorControl setSensorsData={setSensorsData} />
+                    <SensorsGraph sensors={sensors} dataPoints={dataPoints} />
+                    <SensorsTotalStats
+                        maxMeasurement={maxMeasurement}
+                        minMeasurement={minMeasurement}
+                        averageMeasurement={averageMeasurement}
+                        actualRate={actualRate}
+                    />
+                </div>
+                <SensorInfo sensors={sensors} />
             </div>
-            <SensorInfo sensors={sensors} />
-        </div>
+        </ErrorBoundary>
     );
 }

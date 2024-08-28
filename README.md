@@ -39,6 +39,16 @@ I choose to split the screen into three parts:
 In this way, the user can easily interact with the sensors, see some aggregated stats, and see the data in real-time print to the screen.
 The graph is updated every 0.1 seconds with the new data points.
 
+## Technologies
+- React & Next 14
+- TypeScript
+- Tailwind CSS
+- Shadecn UI
+- Socket.IO
+- Chart.js
+- Jest
+- Zustand state management
+
 ## Findings
 - While aggregating the data, I found that the average data points of each one of the sensors strive for zero, and the total average of all values as well.
 - We can see if the sensors have more positive or negative values when looking at the sum of any data point.
@@ -51,6 +61,9 @@ The graph is updated every 0.1 seconds with the new data points.
 - I currently use a single message queue to store messages from the server. This could create a bottleneck if we receive a large volume of messages. To address this, we should explore alternative methods for storing messages, such as implementing a circular buffer or utilizing a different data structure that can handle the messages more effectively. Alternatively, an even better solution could be to store the data on the server and retrieve only the data we need to view in real time.
 
 ## Improvements
+- Due to time constraints, mobile support and responsiveness have not been implemented yet.
 - The graph can be improved by adding more features like zoom in, zoom out, and more.
 - The statistics table can be improved by adding aggregated data points like the median, variance, standard deviation, etc.
 - For scalability, we can move the aggregations and other calculations to the server and pull the data using an API call.
+- After stopping the live stream and starting it again, the rate at which data accumulates can appear very high. This happens because I am comparing the incoming data to the last data point on the graph, and after a long pause, the difference can be large. This issue is resolved after the second message is received.
+- We should consider SSR for the initial load of the page to improve the performance.

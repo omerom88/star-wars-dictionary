@@ -130,25 +130,6 @@ export function useSensorStore() {
                             : state.minMeasurement
                     );
 
-                    //set actual rate
-                    set((state) => {
-                        if (state.dataPoints.length > 0) {
-                            const elapsedTime =
-                                getDateFromDataPoint(
-                                    state.dataPoints.at(-1).time
-                                ).getTime() -
-                                getDateFromDataPoint(
-                                    state.dataPoints.at(0).time
-                                ).getTime();
-                            const rate =
-                                (state.dataPoints.length / elapsedTime) * 1000;
-                            return {
-                                actualRate: toTwoFloatingPoints(rate),
-                            };
-                        }
-                        return { actualRate: 0 };
-                    });
-
                     //set sensors stats
                     set((state) => ({
                         sensors: state.sensors.map((sensor) => {
@@ -180,12 +161,23 @@ export function useSensorStore() {
                     }));
                 });
 
-                //set client data points
-                set((state) => ({
-                    dataPoints: [...state.dataPoints, clientDataPoint].slice(
-                        -MAX_DATA_POINTS
-                    ),
-                }));
+                //set actual rate + data points
+                set((state) => {
+                    const currentTime = data.time;
+                    const previousTime = state.dataPoints.at(-1)?.time;
+
+                    const elapsedTime =
+                        new Date(currentTime).getTime() -
+                        new Date(previousTime).getTime();
+
+                    return {
+                        actualRate: elapsedTime,
+                        dataPoints: [
+                            ...state.dataPoints,
+                            clientDataPoint,
+                        ].slice(-MAX_DATA_POINTS),
+                    };
+                });
             },
 
             setSensorClick: (sensorId: number) => {
