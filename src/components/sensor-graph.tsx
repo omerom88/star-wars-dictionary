@@ -1,7 +1,7 @@
 import { LiveChart } from '@/components/ui/live-chart';
 import { ClientDataPoint, Sensor } from '@/types/sensor';
 import { useEffect, useState } from 'react';
-import { getDateFromDataPoint, setDateFromSeconds } from '@/lib/utils';
+import { setDateFromSeconds } from '@/lib/utils';
 import { Slider } from '@/components/ui/slider';
 
 export type SensorsGraphProps = {
@@ -26,9 +26,9 @@ export const SensorsGraph = ({ sensors, dataPoints }: SensorsGraphProps) => {
         if (latestDataPoint) {
             const fromDate = setDateFromSeconds(
                 lookupPeriod,
-                getDateFromDataPoint(latestDataPoint.time)
+                new Date(latestDataPoint.time)
             );
-            const dataPointDate = getDateFromDataPoint(dataPoint.time);
+            const dataPointDate = new Date(dataPoint.time);
             return dataPointDate >= fromDate;
         }
         return true;

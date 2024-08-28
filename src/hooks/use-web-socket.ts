@@ -43,7 +43,7 @@ export const useWebSocket = (
         return () => {
             socket.disconnect();
         };
-    }, []);
+    }, [url]);
 
     return { error, isConnected };
 };

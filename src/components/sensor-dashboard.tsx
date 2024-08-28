@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useCallback, useState } from 'react';
 import { SensorList } from '@/components/sensor-list';
 import { SensorsGraph } from '@/components/sensor-graph';
 import { SensorsTotalStats } from '@/components/sensor-total-stats';
@@ -31,13 +31,18 @@ export function SensorDashboard() {
         dataPoints: state.dataPoints,
         actualRate: state.actualRate,
     }));
-    const { setSensorClick, setAllSensorClick, setSensorsData, clearData } =
-        useStore(sensorStore, (selector) => selector.actions);
+    const { setSensorClick, setAllSensorClick, setSensorsData } = useStore(
+        sensorStore,
+        (selector) => selector.actions
+    );
+
+    const setUpdate = useCallback(async (message: ServerDataPoint) => {
+        return await concurrentMessageQueue.enqueue(message);
+    }, []);
 
     const { error, isConnected } = useWebSocket(
         'http://localhost:3001',
-        async (message: ServerDataPoint) =>
-            await concurrentMessageQueue.enqueue(message)
+        setUpdate
     );
 
     if (error) {

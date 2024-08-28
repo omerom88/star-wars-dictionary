@@ -1,9 +1,4 @@
-import {
-    toTwoFloatingPoints,
-    getDateFromDataPoint,
-    setDateFromSeconds,
-} from '../../lib/utils';
-import { ClientDataPoint } from '@/types/sensor';
+import { setDateFromSeconds, toTwoFloatingPoints } from '../../lib/utils';
 
 describe('toTwoFloatingPoints', () => {
     it('should round to two decimal places', () => {
@@ -11,70 +6,6 @@ describe('toTwoFloatingPoints', () => {
         expect(toTwoFloatingPoints(2.005)).toBe(2.01);
         expect(toTwoFloatingPoints(10)).toBe(10);
         expect(toTwoFloatingPoints(0.001)).toBe(0);
-    });
-});
-
-describe('getDateFromDataPoint', () => {
-    it('should correctly parse AM times', () => {
-        const dataPoint: ClientDataPoint = {
-            time: '09:30:00 AM',
-            values: [
-                { 1: 10 },
-                { 2: 20 },
-                { 3: 30 },
-            ] as ClientDataPoint['values'],
-        };
-
-        const result = getDateFromDataPoint(dataPoint.time);
-
-        expect(result.getHours()).toBe(9);
-        expect(result.getMinutes()).toBe(30);
-        expect(result.getSeconds()).toBe(0);
-    });
-
-    it('should correctly parse PM times', () => {
-        const dataPoint: ClientDataPoint = {
-            time: '02:45:30 PM',
-            values: [
-                { 1: 10 },
-                { 2: 20 },
-                { 3: 30 },
-            ] as ClientDataPoint['values'],
-        };
-
-        const result = getDateFromDataPoint(dataPoint.time);
-
-        expect(result.getHours()).toBe(14);
-        expect(result.getMinutes()).toBe(45);
-        expect(result.getSeconds()).toBe(30);
-    });
-
-    it('should handle 12 AM correctly', () => {
-        const dataPoint: ClientDataPoint = {
-            time: '12:00:00 AM',
-            values: [
-                { 1: 10 },
-                { 2: 20 },
-                { 3: 30 },
-            ] as ClientDataPoint['values'],
-        };
-
-        const result = getDateFromDataPoint(dataPoint.time);
-
-        expect(result.getHours()).toBe(0);
-    });
-
-    it('should handle 12 PM correctly', () => {
-        const dataPoint: ClientDataPoint = {
-            time: '12:00:00 PM',
-            values: [
-                { 1: 10 },
-                { 2: 20 },
-                { 3: 30 },
-            ] as ClientDataPoint['values'],
-        };
-        const result = getDateFromDataPoint(dataPoint.time);
-        expect(result.getHours()).toBe(12);
     });
 });
 

@@ -1,6 +1,5 @@
 import { type ClassValue, clsx } from 'clsx';
 import { twMerge } from 'tailwind-merge';
-import { ClientDataPoint } from '@/types/sensor';
 
 export function cn(...inputs: ClassValue[]) {
     return twMerge(clsx(inputs));
@@ -8,23 +7,6 @@ export function cn(...inputs: ClassValue[]) {
 
 export function toTwoFloatingPoints(value: number) {
     return Math.round(value * 100) / 100;
-}
-
-export function getDateFromDataPoint(timeString: string) {
-    const [time, period] = timeString.split(' ');
-    const [hourString, minuteString, secondString] = time.split(':');
-    let hours = parseInt(hourString);
-    const minutes = parseInt(minuteString);
-    const seconds = parseInt(secondString);
-
-    if (period === 'PM' && hours < 12) {
-        hours += 12;
-    } else if (period === 'AM' && hours === 12) {
-        hours = 0;
-    }
-    const date = new Date();
-    date.setHours(hours, minutes, seconds, 0);
-    return date;
 }
 
 export function setDateFromSeconds(

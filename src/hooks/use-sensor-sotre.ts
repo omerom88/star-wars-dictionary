@@ -5,7 +5,7 @@ import {
     Sensor,
     ServerDataPoint,
 } from '@/types/sensor';
-import { getDateFromDataPoint, toTwoFloatingPoints } from '@/lib/utils';
+import { toTwoFloatingPoints } from '@/lib/utils';
 
 const MAX_DATA_POINTS = 200;
 const LINE_COLORS = [

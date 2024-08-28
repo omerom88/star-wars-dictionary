@@ -4,20 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b50da2e5-e31e-4e34-8d21-c3e779fc776f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/ui/full-screen-text.tsx" afterDir="false" />
+    <list default="true" id="b50da2e5-e31e-4e34-8d21-c3e779fc776f" name="Changes" comment="removing redundancies">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/sensor-dashboard-mockup.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/sensor-dashboard-mockup.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/sensor-control.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sensor-control.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/sensor-dashboard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sensor-dashboard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/sensor-info.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sensor-info.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/sensor-list.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sensor-list.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/sensor-total-stats.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sensor-total-stats.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/live-chart.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/live-chart.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/sensor-graph.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sensor-graph.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/hooks/use-sensor-sotre.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/use-sensor-sotre.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tailwind.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/use-web-socket.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/use-web-socket.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/utils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/utils.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tests/lib/utils.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/lib/utils.test.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +39,8 @@
     "Jest.ConcurrentMessageQueue.executor": "Run",
     "Jest.cincurrent-message-queue.test.ts.executor": "Run",
     "Jest.getDateFromDataPoint.executor": "Run",
+    "Jest.new Date.should handle 12 PM correctly.executor": "Run",
+    "Jest.new Date.should handle time correctly.executor": "Run",
     "Jest.toTwoFloatingPoints.executor": "Run",
     "Jest.utils.test.ts.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
@@ -60,6 +56,8 @@
     "nodejs.jest.jest_package": "/Users/omerrom/dev/sensor-dashboard/node_modules/jest",
     "nodejs_package_manager_path": "npm",
     "npm.dev.executor": "Run",
+    "npm.lint.executor": "Run",
+    "npm.test.executor": "Run",
     "settings.editor.selected.configurable": "preferences.keymap",
     "ts.external.directory.path": "/Users/omerrom/dev/sensor-dashboard/node_modules/typescript/lib",
     "vue.rearranger.settings.migration": "true"
@@ -82,47 +80,31 @@
       <recent name="$PROJECT_DIR$/src/types/sensor.ts" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.dev">
-    <configuration name="cincurrent-message-queue.test.ts" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="npm.lint">
+    <configuration name="new Date.should handle 12 PM correctly" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <jest-package value="$PROJECT_DIR$/node_modules/jest" />
       <working-dir value="$PROJECT_DIR$" />
       <envs />
-      <scope-kind value="TEST_FILE" />
-      <test-file value="$PROJECT_DIR$/src/tests/lib/cincurrent-message-queue.test.ts" />
-      <method v="2" />
-    </configuration>
-    <configuration name="getDateFromDataPoint" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
-      <working-dir value="$PROJECT_DIR$" />
-      <envs />
-      <scope-kind value="SUITE" />
+      <scope-kind value="TEST" />
       <test-file value="$PROJECT_DIR$/src/tests/lib/utils.test.ts" />
       <test-names>
-        <test-name value="getDateFromDataPoint" />
+        <test-name value="new Date" />
+        <test-name value="should handle 12 PM correctly" />
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="toTwoFloatingPoints" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+    <configuration name="new Date.should handle time correctly" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <jest-package value="$PROJECT_DIR$/node_modules/jest" />
       <working-dir value="$PROJECT_DIR$" />
       <envs />
-      <scope-kind value="SUITE" />
+      <scope-kind value="TEST" />
       <test-file value="$PROJECT_DIR$/src/tests/lib/utils.test.ts" />
       <test-names>
-        <test-name value="toTwoFloatingPoints" />
+        <test-name value="new Date" />
+        <test-name value="should handle time correctly" />
       </test-names>
-      <method v="2" />
-    </configuration>
-    <configuration name="utils.test.ts" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
-      <working-dir value="$PROJECT_DIR$" />
-      <envs />
-      <scope-kind value="TEST_FILE" />
-      <test-file value="$PROJECT_DIR$/src/tests/lib/utils.test.ts" />
       <method v="2" />
     </configuration>
     <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
@@ -135,13 +117,33 @@
       <envs />
       <method v="2" />
     </configuration>
+    <configuration name="lint" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="lint" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="test" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="test" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.lint" />
+        <item itemvalue="npm.test" />
+        <item itemvalue="Jest.new Date.should handle time correctly" />
+        <item itemvalue="Jest.new Date.should handle 12 PM correctly" />
         <item itemvalue="npm.dev" />
-        <item itemvalue="Jest.utils.test.ts" />
-        <item itemvalue="Jest.cincurrent-message-queue.test.ts" />
-        <item itemvalue="Jest.toTwoFloatingPoints" />
-        <item itemvalue="Jest.getDateFromDataPoint" />
       </list>
     </recent_temporary>
   </component>
@@ -155,11 +157,15 @@
       <updated>1724320764919</updated>
       <workItem from="1724320765945" duration="138000" />
       <workItem from="1724320921865" duration="78228000" />
-      <workItem from="1724824260011" duration="8142000" />
+      <workItem from="1724824260011" duration="9140000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="removing redundancies" />
+    <option name="LAST_COMMIT_MESSAGE" value="removing redundancies" />
   </component>
 </project>
