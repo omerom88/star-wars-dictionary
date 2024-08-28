@@ -1,6 +1,6 @@
 # Sensor Dashboard 📈
 
-A dashboard that shows the data in real time for a list of sensors.
+This dashboard provides real-time data for a list of sensors.
 
 ## Installation
 
@@ -23,32 +23,29 @@ Start the development server:
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-**Make sure to run the server on a different port (3001)
+Open [http://localhost:3000](http://localhost:3000) in your browser to see the dashboard. Make sure to run the server on a different port (3001).
 
 ![Sensor Dashboard](./images/sensor-dashboard-mockup.png)
 
 ## How to use
-- Press the `Start` button to start the stream
-- Press the `Stop` button to stop the stream
+- Press the `Start` button to begin the stream
+- Press the `Stop` button to end the stream
 - Press the `Reset` button to reset the stream
 
-Press on one or more sensors from the list to see the data in the graph in real time.
+Select one or more sensors from the list to view their real-time data on the graph.
 
-Control the graph resolution by changing the lookup period.
+You can control the graph resolution by adjusting the lookup period.
 
-Watch the aggregated data in the table on the right side of the graph.
+View the aggregated data in the table on the right side of the graph.
 
 ## Description
 
-I choose to split the screen into three parts:
-- The left part is the list of sensors that you can select to see the data in the graph.
-- The center part is the control panel that contains the buttons, the real-time data points in the graph by the sensor, and the lookup period input.
-- The right part is the table containing all sensors' aggregated data.
+The dashboard is split into three parts:
+- The left part displays the list of sensors for selection.
+- The center part contains the control panel with buttons, real-time data points in the graph, the lookup period input and some general stats.
+- The right part features a table containing aggregated data for all sensors.
 
-In this way, the user can easily interact with the sensors, see some aggregated stats, and see the data in real-time print to the screen.
-The graph is updated every 0.1 seconds with the new data points.
+This layout allows users to easily interact with sensors, view aggregated statistics, and see real-time data on the screen. The graph is updated every 0.1 seconds with new data points.
 
 ## Technologies
 - React & Next 14
@@ -61,20 +58,19 @@ The graph is updated every 0.1 seconds with the new data points.
 - Zustand state management
 
 ## Findings
-- While aggregating the data, I found that the average data points of each one of the sensors strive for zero, and the total average of all values as well.
-- We can see if the sensors have more positive or negative values when looking at the sum of any data point.
-- When playing with the lookup period, we can see the data points in the graph change accordingly and learn more about the sensor's data by looking at the spikes in the graph.
+- While aggregating the data, it was observed that the average data points for each sensor tend towards zero, as well as the total average of all values.
+- Analysis showed whether sensors have more positive or negative values by examining the sum of any data point.
+- Modifying the lookup period revealed changes in the graph and provided insights into the sensor's data through spikes in the graph.
 
 ## Limitations
-- For the memory to not overflow, I limited the data points in the graph to MAX_DATA_POINTS=200. If we want to increase this number, we should consider storing the old data somewhere.
-  I suggest storing the data in the server and pulling only the data we want to see in real-time.
-- This implementation can work for 20 sensors - if we want to extend it to more sensors, we should consider using a different approach to render the sensor list and the data points in the graph by looking at a subset of sensors at a time.
-- I currently use a single message queue to store messages from the server. This could create a bottleneck if we receive a large volume of messages. To address this, we should explore alternative methods for storing messages, such as implementing a circular buffer or utilizing a different data structure that can handle the messages more effectively. Alternatively, an even better solution could be to store the data on the server and retrieve only the data we need to view in real time.
+- To prevent memory overflow, the data points in the graph are limited to MAX_DATA_POINTS=200. To increase this number, consideration should be given to storing old data elsewhere.
+- This implementation supports up to 20 sensors. Expanding it to more sensors would require a different approach to rendering the sensor list and data points in the graph by selecting a subset of sensors at a time.
+- Currently, a single message queue is used to store messages from the server. This could create a bottleneck with a large volume of messages. Alternatives such as implementing a circular buffer or using a different data structure should be explored. Storing data on the server and fetching only the data needed for real-time viewing could be a better solution.
 
 ## Improvements
 - Due to time constraints, mobile support and responsiveness have not been implemented yet.
-- The graph can be improved by adding more features like zoom in, zoom out, and more.
-- The statistics table can be improved by adding aggregated data points like the median, variance, standard deviation, etc.
-- For scalability, we can move the aggregations and other calculations to the server and pull the data using an API call.
-- After stopping the live stream and starting it again, the rate at which data accumulates can appear very high. This happens because I am comparing the incoming data to the last data point on the graph, and after a long pause, the difference can be large. This issue is resolved after the second message is received.
-- We should consider SSR for the initial load of the page to improve the performance.
+- The graph can be enhanced with features like zoom in, zoom out, and more.
+- The statistics table can be improved with additional aggregated data points such as the median, variance, standard deviation, etc.
+- For scalability, aggregations and other calculations can be moved to the server, and the data can be fetched using an API call.
+- After pausing and restarting the live stream, the data accumulation rate may appear very high. This is due to the comparison of the incoming data with the last data point on the graph, resulting in a large difference after a long pause. This issue is resolved after the second message is received.
+- Consider implementing server-side rendering (SSR) for the initial page load to improve performance.
