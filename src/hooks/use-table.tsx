@@ -15,7 +15,7 @@ export function useTable() {
 
     const [tableData, setTableData] =
         useState<CategoryData[]>(peopleCategoryData);
-    const [editingId, setEditingId] = useState<number>();
+    const [editingId, setEditingId] = useState<string>();
     const [editedData, setEditedData] = useState<CategoryData | null>(null);
 
     useEffect(() => {

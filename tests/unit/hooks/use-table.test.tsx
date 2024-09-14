@@ -15,7 +15,7 @@ jest.mock('@/mocks/mock-people', () => ({
 describe('useTable', () => {
     const mockPeopleCategoryData: CategoryData[] = [
         {
-            id: 1,
+            id: '1',
             name: 'Luke Skywalker',
             height: '172',
             mass: '77',
@@ -25,7 +25,7 @@ describe('useTable', () => {
             url: 'https://swapi.dev/api/people/1/',
         },
         {
-            id: 2,
+            id: '2',
             name: 'C-3PO',
             height: '167',
             mass: '75',
@@ -41,7 +41,7 @@ describe('useTable', () => {
             peopleCategoryData: mockPeopleCategoryData,
         });
         (generateMockEntry as jest.Mock).mockReturnValue({
-            id: 3,
+            id: '3',
             name: 'Mock Person',
             height: '180',
             mass: '80',
@@ -63,7 +63,7 @@ describe('useTable', () => {
         const newPeopleCategoryData = [
             ...mockPeopleCategoryData,
             {
-                id: 3,
+                id: '3',
                 name: 'Leia Organa',
                 height: '150',
                 mass: '49',
@@ -89,7 +89,7 @@ describe('useTable', () => {
             result.current.handleEdit(mockPeopleCategoryData[0]);
         });
 
-        expect(result.current.editingId).toBe(1);
+        expect(result.current.editingId).toBe('1');
         expect(result.current.editedData).toEqual(mockPeopleCategoryData[0]);
     });
 

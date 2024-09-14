@@ -16,7 +16,7 @@ export interface CategoryData {
     created: string;
     edited?: string;
     url: string;
-    id: number;
+    id: string;
 }
 
 export interface CategoryDataResponse {
