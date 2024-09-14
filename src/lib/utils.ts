@@ -1,12 +1,12 @@
 import { type ClassValue, clsx } from 'clsx';
 import { twMerge } from 'tailwind-merge';
+import { v4 as uuid } from 'uuid';
 import { CategoryData, CategoryDataResponse } from '@/types/category-types';
 
 export function cn(...inputs: ClassValue[]) {
     return twMerge(clsx(inputs));
 }
 
-let index = 0;
 export function enhanceDataWithId(
     data: CategoryDataResponse[] | undefined
 ): CategoryDataResponse[] {
@@ -20,7 +20,7 @@ export function enhanceDataWithId(
                 ? value.results?.map((result) => {
                       return {
                           ...result,
-                          id: index++, //add unique id to each item
+                          id: uuid(), //add unique id to each item
                       };
                   })
                 : []) as CategoryData[],

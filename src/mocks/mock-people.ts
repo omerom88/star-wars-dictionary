@@ -1,8 +1,9 @@
+import { v4 as uuid } from 'uuid';
+
 const getRandomIndex = (array: any[]) => {
     return Math.floor(Math.random() * array.length);
 };
 
-let nameIndex = 1000;
 export const generateMockEntry = () => {
     const birthYears = new Array(10).fill(0).map((_, index) => index + 1900);
     const genderList = ['female', 'male'];
@@ -20,6 +21,6 @@ export const generateMockEntry = () => {
         mass: massList[getRandomIndex(massList)].toString(),
         url: urlList[getRandomIndex(urlList)],
         name: `Mocked Name`,
-        id: nameIndex++,
+        id: uuid(),
     };
 };
