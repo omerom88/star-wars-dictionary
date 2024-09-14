@@ -1,6 +1,6 @@
 # Star wars dictionary 🥷
 
-search for star wars characters and see their details
+Web app for searching for Star Wars characters and viewing their details
 
 ## Installation
 
