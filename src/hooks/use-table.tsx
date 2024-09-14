@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useState } from 'react';
 import { CategoryData } from '@/types/category-types';
-import { generateMockEntry } from '@/app/mocks/mock-people';
+import { generateMockEntry } from '@/mocks/mock-people';
 import { useCategoryStore } from '@/hooks/use-store';
 
 const findItemInTableData = (

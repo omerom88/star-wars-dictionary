@@ -4,7 +4,7 @@ import {
     getPeopleSearchResults,
     isViewAll,
 } from '@/components/search/utils';
-import { getMockResults } from '@/app/mocks/mock-resutls';
+import { getMockResults } from '@/mocks/mock-resutls';
 
 describe('getDisplayResults', () => {
     const mockData = getMockResults();

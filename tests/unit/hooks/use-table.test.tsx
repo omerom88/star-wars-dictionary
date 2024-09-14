@@ -1,6 +1,6 @@
 import { renderHook, act } from '@testing-library/react';
 import { useCategoryStore } from '@/hooks/use-store';
-import { generateMockEntry } from '@/app/mocks/mock-people';
+import { generateMockEntry } from '@/mocks/mock-people';
 import { CategoryData } from '@/types/category-types';
 import { useTable } from '@/hooks/use-table';
 
@@ -8,7 +8,7 @@ jest.mock('@/hooks/use-store', () => ({
     useCategoryStore: jest.fn(),
 }));
 
-jest.mock('@/app/mocks/mock-people', () => ({
+jest.mock('@/mocks/mock-people', () => ({
     generateMockEntry: jest.fn(),
 }));
 
