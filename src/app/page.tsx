@@ -1,5 +1,5 @@
-import { SensorDashboard } from '@/components/sensor-dashboard';
+import { redirect } from 'next/navigation';
 
-export default async function SensorDashboardPage() {
-    return <SensorDashboard />;
+export default async function RootPage() {
+    redirect('/search');
 }
