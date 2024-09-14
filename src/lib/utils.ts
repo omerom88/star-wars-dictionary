@@ -20,7 +20,7 @@ export function enhanceDataWithId(
                 ? value.results?.map((result) => {
                       return {
                           ...result,
-                          id: index++,
+                          id: index++, //add unique id to each item
                       };
                   })
                 : []) as CategoryData[],

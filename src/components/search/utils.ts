@@ -1,6 +1,7 @@
 import { CategoryData, CategoryDataResponse } from '@/types/category-types';
 
 export function getDisplayResults(data: CategoryDataResponse[], index: number) {
+    // return only the first 3 results
     const results = data[index].results;
     const displayResults = results.slice(0, 3);
     if (displayResults.length > 0) {
@@ -18,6 +19,7 @@ export function getPeopleSearchResults(
     entities: string[],
     data?: CategoryDataResponse[]
 ) {
+    // return only people data
     const peopleIndex = entities.findIndex((item) => item === 'people');
     if (
         selectedEntity === 'people' &&
