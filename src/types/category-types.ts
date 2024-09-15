@@ -22,6 +22,6 @@ export interface CategoryData {
 export interface CategoryDataResponse {
     count: number;
     next?: string;
-    previous: any;
+    previous: string | null;
     results: CategoryData[];
 }
