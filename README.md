@@ -1,6 +1,6 @@
 # Star wars dictionary 🥷
 
-Web app for searching for Star Wars characters and viewing their details
+Web app for Star Wars dictionary, where you can search for characters, planets, starships, vehicles, and species from the Star Wars universe.
 
 ## Installation
 
